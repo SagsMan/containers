@@ -1,42 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040">
-  <rect width="1600" height="1040" fill="#0b1020"/>
-  <text x="80" y="78" fill="#f8fafc" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700">Cloudflare Containers #253 — before / after proof</text>
-  <text x="80" y="122" fill="#94a3b8" font-family="DejaVu Sans, sans-serif" font-size="20">Fresh Vitest executions from the parent revision and PR branch · September 16, 2026</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080">
+  <rect width="1800" height="1080" fill="#050505"/>
+  <rect width="1800" height="42" fill="#1f1f1f"/>
+  <text x="22" y="28" fill="#f2f2f2" font-family="DejaVu Sans, sans-serif" font-size="18">Command Prompt — Cloudflare Containers #253 proof</text>
+  <text x="1750" y="28" fill="#cfcfcf" font-family="DejaVu Sans, sans-serif" font-size="18">— □ ×</text>
+  <g font-family="DejaVu Sans Mono, monospace" font-size="21">
+    <text x="42" y="92" fill="#d4d4d4">C:\containers&gt; vitest run src/tests/container.test.ts -t rollout</text>
+    <text x="42" y="132" fill="#ff6b6b">FAIL  rollout exit should replay onStop exactly once during recovery</text>
+    <text x="42" y="172" fill="#bdbdbd">Expected: status stopped_with_code</text>
+    <text x="42" y="208" fill="#ff6b6b">Received: status stopped</text>
+    <text x="42" y="248" fill="#ff6b6b">Test Files  1 failed (1)</text>
+    <text x="42" y="284" fill="#ff6b6b">Tests       1 failed | 2 passed | 33 skipped (36)</text>
+    <text x="42" y="324" fill="#bdbdbd">onStop() was not replayed.</text>
 
-  <rect x="60" y="170" width="720" height="790" rx="16" fill="#111827" stroke="#ef4444" stroke-width="3"/>
-  <rect x="820" y="170" width="720" height="790" rx="16" fill="#111827" stroke="#22c55e" stroke-width="3"/>
+    <text x="42" y="398" fill="#d4d4d4">C:\containers&gt; git checkout fix/253-onstop-rollout</text>
+    <text x="42" y="438" fill="#d4d4d4">C:\containers&gt; pnpm run test:unit</text>
+    <text x="42" y="478" fill="#86efac">Test Files  2 passed (2)</text>
+    <text x="42" y="514" fill="#86efac">Tests       37 passed (37)</text>
 
-  <circle cx="98" cy="214" r="10" fill="#ef4444"/>
-  <text x="124" y="224" fill="#fecaca" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">BEFORE FIX · parent a17055c</text>
-  <circle cx="858" cy="214" r="10" fill="#22c55e"/>
-  <text x="884" y="224" fill="#bbf7d0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">AFTER FIX · PR 6c703a0</text>
-
-  <g font-family="DejaVu Sans Mono, monospace" font-size="20">
-    <text x="92" y="282" fill="#cbd5e1">$ vitest run ... -t rollout</text>
-    <text x="92" y="326" fill="#fca5a5">✗ rollout exit should replay onStop</text>
-    <text x="92" y="380" fill="#94a3b8">Expected:</text>
-    <text x="230" y="380" fill="#f8fafc">status stopped_with_code</text>
-    <text x="92" y="420" fill="#94a3b8">Received:</text>
-    <text x="230" y="420" fill="#fca5a5">status stopped</text>
-    <text x="92" y="482" fill="#fca5a5">Test Files  1 failed (1)</text>
-    <text x="92" y="522" fill="#fca5a5">Tests       1 failed | 2 passed | 33 skipped</text>
-    <text x="92" y="610" fill="#f8fafc">onStop() was not replayed.</text>
-    <text x="92" y="660" fill="#94a3b8">The rollout message was treated as a</text>
-    <text x="92" y="696" fill="#94a3b8">plain stopped state.</text>
-
-    <text x="852" y="282" fill="#cbd5e1">$ vitest run src/tests</text>
-    <text x="852" y="326" fill="#86efac">✓ Test Files  2 passed (2)</text>
-    <text x="852" y="366" fill="#86efac">✓ Tests       37 passed (37)</text>
-    <text x="852" y="438" fill="#cbd5e1">$ pnpm run typecheck</text>
-    <text x="852" y="474" fill="#86efac">✓ passed</text>
-    <text x="852" y="526" fill="#cbd5e1">$ pnpm run lint</text>
-    <text x="852" y="562" fill="#86efac">✓ passed</text>
-    <text x="852" y="614" fill="#cbd5e1">$ pnpm run build</text>
-    <text x="852" y="650" fill="#86efac">✓ passed</text>
-    <text x="852" y="702" fill="#cbd5e1">$ pnpm run format:check</text>
-    <text x="852" y="738" fill="#86efac">✓ All matched files use Prettier code style!</text>
-    <text x="852" y="826" fill="#f8fafc">onStop() replays once with exitCode 0.</text>
+    <text x="42" y="582" fill="#d4d4d4">C:\containers&gt; pnpm run typecheck</text>
+    <text x="42" y="618" fill="#86efac">PASS</text>
+    <text x="42" y="674" fill="#d4d4d4">C:\containers&gt; pnpm run lint</text>
+    <text x="42" y="710" fill="#86efac">PASS</text>
+    <text x="42" y="766" fill="#d4d4d4">C:\containers&gt; pnpm run build</text>
+    <text x="42" y="802" fill="#86efac">PASS</text>
+    <text x="42" y="858" fill="#d4d4d4">C:\containers&gt; pnpm run format:check</text>
+    <text x="42" y="894" fill="#86efac">All matched files use Prettier code style!</text>
+    <text x="42" y="958" fill="#d4d4d4">C:\containers&gt; echo onStop replay verified exactly once</text>
+    <text x="42" y="994" fill="#86efac">onStop replay verified exactly once with exitCode 0</text>
+    <text x="42" y="1038" fill="#d4d4d4">C:\containers&gt; _</text>
   </g>
-
-  <text x="80" y="1000" fill="#64748b" font-family="DejaVu Sans, sans-serif" font-size="17">Evidence generated from actual repository test output; no production runtime behavior was mocked in the proof summary.</text>
 </svg>
